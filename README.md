@@ -16,6 +16,7 @@ npm install
 ## Configure
 
 All configuration takes place in `config.js`.
+
 1. Add your packages to the `packages` array
 2. Add your Twitter consumer and access token keys and secrets to the `twitter` object
 3. Add your UPS `licenseNumber`, `userId`, and `password` to the `ups` object
