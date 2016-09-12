@@ -1,0 +1,30 @@
+{
+  "name": "packagebot",
+  "version": "1.0.0",
+  "description": "A Twitter bot for tracking a package.",
+  "main": "packageBot.js",
+  "scripts": {
+    "start": "node packageBot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrianMitchL/packageBot.git"
+  },
+  "keywords": [
+    "package",
+    "track",
+    "Twitter",
+    "bot",
+    "UPS"
+  ],
+  "author": "Brian Mitchell <bman4789@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrianMitchL/packageBot/issues"
+  },
+  "homepage": "https://github.com/BrianMitchL/packageBot#readme",
+  "dependencies": {
+    "shipit": "^1.0.2",
+    "twitter": "^1.4.0"
+  }
+}
