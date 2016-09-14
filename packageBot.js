@@ -15,7 +15,7 @@ function tweet(message) {
     if(error) {
       console.error(error);
     } else {
-      console.groupCollapsed();
+      console.group();
       console.info(tweet);  // Tweet body.
       console.log(response);  // Raw response object.
       console.groupEnd();
