@@ -1,11 +1,5 @@
-// information about the package(s) you are tracking
-module.exports.packages = [
-  {
-    name: '',
-    tracking_number: ''
-  }
-];
-
+// name of the JSON file containing an array of package(s)
+module.exports.packagesFileName = 'packages.json';
 // refresh time in milliseconds
 module.exports.refreshTime = 3600000;
 // optional hashtag to be appended to a tweet

@@ -1,4 +1,6 @@
-node_modules
-.idea
+node_modules/
+.idea/
+dist/
 .DS_Store
 config.js
+packages.json
