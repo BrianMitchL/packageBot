@@ -15,10 +15,8 @@ function tweet(message) {
     if(error) {
       console.error(error);
     } else {
-      console.group();
       console.info(tweet);  // Tweet body.
       console.log(response);  // Raw response object.
-      console.groupEnd();
     }
   });
 }
