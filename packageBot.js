@@ -24,23 +24,21 @@ function tweet(message) {
 function asyncGetUpsData(item, callback) {
   UPS.requestData({trackingNumber: item.tracking_number}, (err, result) => {
     console.info(`Retrieving tracking data for ${item.name} at ${new Date()}`);
-
+    console.log(result);
     if(err) {
       console.error(err);
       item.updated = false;
     } else {
-      // no location change
-      if(item.location === result.activities[0].location) {
+      // no status change
+      if(item.location === result.activities[0].location && item.details === result.activities[0].details) {
         item.updated = false;
         console.info(`No change ${item.name}`);
       } else { // location changed
         item.location = result.activities[0].location;
-        item.updated = true;
         item.details = result.activities[0].details;
+        item.updated = true;
         console.info(`Updated ${item.name}`);
-        // this might catch some delivered statuses
-        const details = result.activities[0].details.toLowerCase();
-        if(details.includes('dropped off') || details.includes('delivered')) {
+        if(result.statusType === 'D') {
           item.delivered = true;
           console.info(`Delivered ${item.name}`);
         }
