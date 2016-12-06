@@ -67,7 +67,11 @@ function tweetUpdates(packages) {
       const message = `${config.title} ${item.name} has been delivered! \u2764`;
       tweet(message)
     } else if(item.updated === true) {
-      const message = `${config.title} ${item.name} is in ${item.location}! Status: ${item.details}.`;
+      if (item.singular) {
+        const message = `${config.title} ${item.name} is in ${item.location}! Status: ${item.details}.`;
+      } else {
+        const message = `${config.title} ${item.name} are in ${item.location}! Status: ${item.details}.`;
+      }
       tweet(message)
     }
   });
